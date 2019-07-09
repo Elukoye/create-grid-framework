@@ -1,0 +1,155 @@
+html{
+  box-sizing:border-box;
+}
+*,
+*:before,
+*:after{
+  box-sizing: inherit;
+}
+
+/* CUSTOM GRID FOR LAYOUTS */
+
+.g-container{
+ max-width:1140px;
+ margin-right: auto;
+ margin-left: auto;
+
+
+}
+.one-column-grid{
+  width:99.99%;
+}
+.one-column-grid:after{
+  display:table;
+  clear: both;
+  content:"";
+}
+.two-column-grid{
+  width:50%;
+  float:left;
+}
+.two-column-grid:after{
+  display:table;
+  clear: both;
+  content:"";
+}
+
+.three-column-grid.grid-item{
+ width:33.3333%;
+ float:left;
+}
+.three-column-grid:after{
+  display:table;
+  clear: both;
+  content:"";
+}
+.grid-item{
+  width:calc((100% -20px*3) / 3 );
+  margin-left: 10px;
+  margin-right: 10px;
+  float:left;
+}
+
+/* COMPONENTS FOR GRID LAYOUT */
+.header{
+  width:99.996%;
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left;
+}
+.footer{
+  width:99.996%;
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left;
+}
+.menu{
+  width:24.99%;
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left;
+}
+.main{
+  width:49.98%;
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left;
+}
+.child-item{
+  width:16.66%;
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left;
+}
+/* RESPONSIVE LAYOUT-MOBILE FIRST */
+/* min-width 320px */
+@media screen and (max-width: 600px) {
+  .header,.menu,.main,.footer {
+    width:33.332% ;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu,.main,.footer {
+    margin-top:20px ;
+  }
+}
+
+/*min-width 720px  */
+@media screen and (max-width: 720px) {
+  .header {
+    width:49.998% ;
+    margin-top:0;
+    float:left
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    width:49.998% ;
+    margin-top:20px;
+    float:left
+  }
+}
+@media screen and (max-width: 720px) {
+  .menu {
+    width:33.332% ;
+    margin:20px;
+    float:right;
+  }
+}
+@media screen and (max-width: 720px) {
+  .main {
+    width:49.998% ;
+    margin-top:20px;
+    float:left
+  }
+}
+
+/* min-width 1200px */
+@media screen and (max-width: 1200px) {
+  .header {
+    width:64.664% ;
+    float:right;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .menu {
+    width:24.999% ;
+    margin-left:20px;
+    float:left;
+    
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main {
+    width:83.33% ;
+    margin-top:20px;
+    
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer {
+    width:99.996% ;
+    margin-top:20px;
+    
+  }
+}
