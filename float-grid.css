@@ -1,6 +1,8 @@
 html{
   box-sizing:border-box;
+  font-size: 10px;
 }
+
 *,
 *:before,
 *:after{
@@ -9,45 +11,38 @@ html{
 
 /* CUSTOM GRID FOR LAYOUTS */
 
-.g-container{
- max-width:1140px;
- margin-right: auto;
- margin-left: auto;
-
-
+.container {
+  max-width: 114rem;
+  margin-right: auto;
+  margin-left: auto;
 }
-.one-column-grid{
+
+.one-column-grid .grid-item {
   width:99.99%;
 }
-.one-column-grid:after{
-  display:table;
-  clear: both;
-  content:"";
-}
-.two-column-grid{
+
+.two-column-grid .grid-item {
   width:50%;
   float:left;
 }
-.two-column-grid:after{
-  display:table;
-  clear: both;
-  content:"";
-}
 
-.three-column-grid.grid-item{
- width:33.3333%;
+.three-column-grid .grid-item {
+ width:33.33333%;
  float:left;
 }
-.three-column-grid:after{
-  display:table;
+
+[class*='-column-grid']:after {
+  display: table;
   clear: both;
-  content:"";
+  content: "";
 }
-.grid-item{
-  width:calc((100% -20px*3) / 3 );
+
+.grid-item {
+  width: calc((100% - 20px * 3) / 3);
   margin-left: 10px;
   margin-right: 10px;
-  float:left;
+  float: left;
+  background-color: lightblue;
 }
 
 /* COMPONENTS FOR GRID LAYOUT */
@@ -88,6 +83,7 @@ html{
     width:33.332% ;
   }
 }
+
 @media screen and (max-width: 600px) {
   .menu,.main,.footer {
     margin-top:20px ;
@@ -136,20 +132,20 @@ html{
     width:24.999% ;
     margin-left:20px;
     float:left;
-    
+
   }
 }
 @media screen and (max-width: 1200px) {
   .main {
     width:83.33% ;
     margin-top:20px;
-    
+
   }
 }
 @media screen and (max-width: 1200px) {
   .footer {
     width:99.996% ;
     margin-top:20px;
-    
+
   }
 }

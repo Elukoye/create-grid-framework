@@ -1,0 +1,62 @@
+/* styles.css */
+
+/* basic styling */
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  padding: 5rem;
+}
+
+.hero-title {
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+  font-weight: 700;
+  color: #ff0077;
+
+}
+
+.hero-copy {
+  font-size: 2rem;
+  color: #6116a0;
+  margin: 3rem 0;
+}
+
+.hero-cta a {
+  font-size: 1.2rem;
+  background-color: var(--dribble-pink);
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+/* navbar */
+
+/* hero section */
+
+/* shots sub-menu */
+
+/* shots */
+
+.shot {
+  height: ;
+}
+
+/* sign up */
+
+/* footer */
