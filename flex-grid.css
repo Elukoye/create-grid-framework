@@ -5,21 +5,14 @@
 /* Uses Botstrap style class names to keep it familiar */
 
 /* breakpoints */
-/* These can be changed in the media queries below as required */
-/* xs - 0 (default) */
 /* sm - 576px */
 /* md - 768px */
-/* lg - 1170px */
-/* xl - 1540px */
+/* lg - 992px */
+/* xl - 1200px */
 
 :root {
   /* margins */
   --margin: 1.5rem;
-  /* container widths for fixed width container (.container) */
-  --sm-container-width: 54rem;
-  --md-container-width: 72rem;
-  --lg-container-width: 96rem;
-  --xl-container-width: 114rem;
 }
 
 html {
@@ -33,33 +26,7 @@ html {
   box-sizing: inherit;
 }
 
-/* utility classes */
-.h-left {
-  justify-content: flex-start;
-}
-
-.h-center {
-  justify-content: center;
-}
-
-.h-right {
-  justify-content: flex-end;
-}
-
-.v-top {
-  align-items: flex-start;
-}
-
-.v-center {
-  align-items: center;
-}
-
-.v-bottom {
-  align-items: flex-end;
-}
-
-.container,
-.container-fluid {
+.container {
   width: 100%;
   padding-right: var(--margin);
   padding-left: var(--margin);
@@ -74,7 +41,7 @@ html {
   margin-left: calc(var(--margin) * -1);
 }
 
-[class=*'col-'] {
+[class*='col-'] {
   position: relative;
   width: 100%;
   padding-right: var(--margin);
@@ -145,10 +112,6 @@ html {
 /* small */
 @media (min-width: 576px) {
 
-  .container {
-    max-width: var(--sm-container-width);
-  }
-
   .col-sm-1 {
     flex: 0 0 8.333333%;
     max-width: 8.333333%;
@@ -213,10 +176,6 @@ html {
 /* medium */
 @media (min-width: 768px) {
 
-  .container {
-    max-width: var(--md-container-width);
-  }
-
   .col-md-1 {
     flex: 0 0 8.333333%;
     max-width: 8.333333%;
@@ -279,23 +238,7 @@ html {
 }
 
 /* large */
-@media (min-width: 1170px) {
-
-  .container {
-    max-width: var(--lg-container-width);
-  }
-
-  .col-lg {
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%;
-  }
-
-  .col-lg-auto {
-    flex: 0 0 auto;
-    width: auto;
-    max-width: 100%;
-  }
+@media (min-width: 992px) {
 
   .col-lg-1 {
     flex: 0 0 8.333333%;
@@ -359,7 +302,7 @@ html {
 }
 
 /* extra large */
-@media (min-width: 1540px) {
+@media (min-width: 1200px) {
 
   .col-xl-1 {
     flex: 0 0 8.333333%;

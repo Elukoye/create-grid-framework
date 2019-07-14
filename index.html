@@ -7,102 +7,209 @@
   <link rel="stylesheet" href="flex-grid.css">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-  <main class="main-content container-fluid">
-
-    <nav class="row">
-      <div class="nav-logo col-4">
-        <img src="" alt="Dribble Logo">
-      </div>
-      <div class="nav-links col-4">
-        <!-- <ul> -->
-          <li>Shots</li>
-          <li>Designers</li>
-          <li>Teams</li>
-          <li>Community</li>
-          <li>Jobs</li>
-        </ul>
-      </div>
-      <div class="nav-right col-4">
-        <a href="">Sign In</a>
-      </div>
-    </nav>
+  <main class="container">
 
     <header>
-      <section class="row v-center">
-        <div class="hero-content col-12 col-md-7">
+
+      <nav class="mobile-nav row">
+        <div class="mobile-nav-menu">
+          <a href="#"><i class="material-icons">menu</i></a>
+        </div>
+        <div class="mobile-nav-logo">
+          <a href="#"><img src="https://cdn.dribbble.com/assets/logo-small-4612353cefa78dfe35ba5e8e9d35da9f9305a3a516ef9675b5c37004c5862b6d.png" alt="Dribble Logo"></a>
+        </div>
+        <div class="mobile-nav-sign-in">
+          <a href="#">Sign In</a>
+        </div>
+      </nav>
+
+      <nav class="site-nav row">
+        <div class="nav-left">
+          <a href="#"><img src="https://cdn.dribbble.com/assets/logo-small-4612353cefa78dfe35ba5e8e9d35da9f9305a3a516ef9675b5c37004c5862b6d.png" alt="Dribble Logo"></a>
+          <ul>
+            <li><a href="#">Shots</a></li>
+            <li><a href="#">Designers</a></li>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Jobs</a></li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <input type="text" placeholder="Search">
+          <a href="#" class="sign-up">Sign Up</a>
+          <a href="#">Sign In</a>
+        </div>
+      </nav>
+
+      <section class="row header-hero">
+        <div class="hero-content col-12 col-md-6 col-lg-7">
           <h1 class="hero-title">Discover the world's top designers &amp; creatives</h1>
           <p class="hero-copy">Dribbble is the leading destination to find & showcase creative work and home to the world's best design professionals.</p>
-          <div class="hero-cta"><a href="#">Sign Up</a></div>
+          <div class="hero-cta">
+            <a href="#">Sign Up</a>
+          </div>
         </div>
-        <div class="hero-image col-12 col-md-5">
+        <div class="hero-image col-12 col-md-6 col-lg-5">
           <img src="assets/robot.gif" alt="Dribble Robot">
         </div>
       </section>
-      <section class="row">
-        <p class="hero-attribution">Art by <cite><a href="#">Dennis Salvatier</a></cite> in Los Angeles, CA</p>
+      <section class="row hero-attribution">
+        <p>Art by <cite><a href="#">Dennis Salvatier</a></cite> in Los Angeles, CA</p>
       </section>
     </header>
 
-    <section>
-      <div class="shots-subnav row">
-        <div class="shots-subnav-left col-12"></div>
-        <div class="shots-subnav-right col-12"></div>
-      </div>
-      <div class="shots">
-        <div class="row">
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-        </div>
-        <div class="row">
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-        </div>
-        <div class="row">
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-        </div>
-        <div class="row">
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-        </div>
-        <div class="row">
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-        </div>
-        <div class="row">
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-          <article class="col-12 col-md-2 col-lg-3 col-xl-4"></article>
-        </div>
-      </div>
-      <div class="sign-up row h-center v-center">
-        <div class="sign-up-button col-6"></div>
-        <p class="col-6">or Sign in</p>
-      </div>
-    </section>
+    <div class="shots row">
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=1" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=2" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=3" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=4" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=5" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=6" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=7" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=8" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=9" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=10" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=11" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=12" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=13" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=14" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=15" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=16" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=1" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=2" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=3" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=4" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=5" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=6" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=7" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=8" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=9" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=10" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=11" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=12" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=13" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=14" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=15" alt="...">
+      </article>
+      <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <img src="https://picsum.photos/270/270?random=16" alt="...">
+      </article>
+    </div>
 
   </main>
 
-  <footer class="row">
-    <div class="info col-12 col-lg-3"></div>
-    <div class="links col-12 col-lg-3"></div>
-    <div class="hiring col-12 col-lg-3"></div>
-    <div class="jobs col-12 col-lg-3"></div>
-    <div class="shot-count col-12 col-lg-3"></div>
+  <footer>
+    <div class="row">
+      <div class="info col-12 col-lg-3">
+        <a href="#"><img src="assets/logo-footer.png" alt="..."></a>
+        <h3>Show and tell for designers</h3>
+        <p>What are you working on? Dribbble is a community of designers sharing screenshots of their work, process, and projects.</p>
+        <ul>
+          <li><a href="#"><i class="material-icons">group_work</i></a></li>
+          <li><a href="#"><i class="material-icons">donut_small</i></a></li>
+          <li><a href="#"><i class="material-icons">explore</i></a></li>
+          <li><a href="#"><i class="material-icons">language</i></a></li>
+          <li><a href="#"><i class="material-icons">offline_bolt</i></a></li>
+        </ul>
+      </div>
+      <div class="links col-12 col-lg-3">
+        <h3>Dribble</h3>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Guidelines</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Playoffs</a></li>
+        </ul>
+      </div>
+      <div class="hiring col-12 col-lg-3">
+        <h3>Hiring</h3>
+        <ul>
+          <li><a href="#">Post a job</a></li>
+          <li><a href="#">Search Designers</a></li>
+          <li><a href="#">Add your team</a></li>
+        </ul>
+      </div>
+      <div class="shot-count col-12 col-lg-3">
+        <img src="assets/shot-count.png" alt="...">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-lg-3">
+        <p>&copy; 2019 Dribble. All rights reserved</p>
+      </div>
+      <div class="col-6 col-lg-3">
+        <p>Made with ♥ remotely from Salem, MA</p>
+      </div>
+    </div>
   </footer>
 
 </body>
