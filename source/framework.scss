@@ -1,0 +1,349 @@
+// framework.scss
+
+// Our CSS flexbox based grid system and framework
+// Uses HTML based styling tags
+// Uses Bootstrap style class names to keep it familiar
+
+// ****************************************************************** Variables
+$spacing-properties: all, top, right, bottom, left;
+$display-properties: flex, hidden, none;
+$number-of-columns: 12;
+$breakpoint-widths: 0px, 720px, 1024px;
+$breakpoint-labels: sm, md, lg;
+$base-font-size: 10px;
+$margin-default: 1.5rem;
+
+// *************************************************************** Base Styling
+html {
+  font-size: $base-font-size;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// **************************************************************** Grid System
+
+// Includes container, row, column, padding, margin and display classes.
+
+// Breakpoints
+// sm - 0px
+// md - 720px
+// lg - 1024px
+
+.container {
+  width: 100%;
+  padding-right: $margin-default;
+  padding-left: $margin-default;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: $margin-default * -1;
+  margin-left: $margin-default * -1;
+}
+
+.no-row-margins {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+[class*='col-'] {
+  position: relative;
+  width: 100%;
+  padding-right: $margin-default;
+  padding-left: $margin-default;
+}
+
+.no-col-padding > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@mixin column($breakpoint, $size) {
+  $width: (100 / $number-of-columns) * $size;
+
+  .col-#{$breakpoint}-#{$size} {
+    flex: 0 0 unquote("#{$width}%");
+    max-width: unquote("#{$width}%");
+  }
+}
+
+@mixin margin($breakpoint, $direction, $size) {
+  $width: $size / 4;
+
+  @if $direction == 'all' {
+    .mar-#{$breakpoint}-#{$direction}-#{$size} {
+      margin: #{$width}rem;
+    }
+  } @else {
+    .mar-#{$breakpoint}-#{$direction}-#{$size} {
+      margin#{-$direction}: #{$width}rem;
+    }
+  }
+}
+
+@mixin padding($breakpoint, $direction, $size) {
+  $width: $size / 4;
+
+  @if $direction == 'all' {
+    .pad-#{$breakpoint}-#{$direction}-#{$size} {
+      padding: #{$width}rem;
+    }
+  } @else {
+    .pad-#{$breakpoint}-#{$direction}-#{$size} {
+      padding#{-$direction}: #{$width}rem;
+    }
+  }
+}
+
+@mixin display($breakpoint, $property) {
+  .display-#{$breakpoint}-#{$property} {
+    display: $property;
+  }
+}
+
+@for $i from 1 to length($breakpoint-widths) + 1 {
+
+  // Breakpoints
+  @media (min-width: nth($breakpoint-widths, $i)) {
+
+    // Columns
+    .col-#{nth($breakpoint-labels, $i)} {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+
+    .col-#{nth($breakpoint-labels, $i)}-auto {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: 100%;
+    }
+
+    @for $j from 1 to $number-of-columns + 1 {
+      @include column(nth($breakpoint-labels, $i), $j);
+    }
+
+    // Margin
+    .mar-#{nth($breakpoint-labels, $i)}-auto {
+      margin: auto;
+    }
+
+    @each $property in $spacing-properties {
+
+      @for $k from 0 to length($spacing-properties) + 1 {
+        @include margin(nth($breakpoint-labels, $i), $property, $k);
+      }
+    }
+
+    // Padding
+    .pad-#{nth($breakpoint-labels, $i)}-auto {
+      margin: auto;
+    }
+
+    @each $property in $spacing-properties {
+
+      @for $k from 0 to length($spacing-properties) + 1 {
+        @include padding(nth($breakpoint-labels, $i), $property, $k);
+      }
+    }
+
+    // Display
+    @each $property in $display-properties {
+      @include display(nth($breakpoint-labels, $i), $property);
+    }
+  }
+}
+
+// **************************************************************** Positioning
+
+// Flex
+
+// Horizontal Alignment
+.justify-left {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-right {
+  justify-content: flex-end;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+// Vertical Alignment
+.align-top {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-bottom {
+  align-items: flex-end;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+// Floats
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-none {
+  float: none;
+}
+
+.float-clear {
+  clear: both;
+}
+
+// ********************************************************************* Colors
+
+$colors: (
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "blue": #007bff,
+  "indigo": #6610f2,
+  "purple": #6f42c1,
+  "pink": #e83e8c,
+  "red": #dc3545,
+  "orange": #fd7e14,
+  "yellow": #ffc107,
+  "green": #28a745,
+  "teal": #20c997,
+  "cyan": #17a2b8,
+  "white": #fff,
+  "gray": #6c757d,
+  "gray-dark": #343a40,
+  "primary": #007bff,
+  "secondary": #6c757d,
+  "danger": #dc3545,
+  "light": #f8f9fa,
+  "dark": #343a40,
+);
+
+@each $name, $value in $colors {
+
+  // Font Colors
+  .text-color-#{$name} {
+    color: $value;
+  }
+
+  // Background Colors
+  .bg-color-#{$name} {
+    background-color: $value;
+  }
+}
+
+// *********************************************************************** Text
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.font-size-xs {
+  font-size: 0.5rem;
+}
+
+.font-size-s {
+  font-size: 1rem;
+}
+
+.font-size-m {
+  font-size: 2rem;
+}
+
+.font-size-l {
+  font-size: 3rem;
+}
+
+.font-size-xl {
+  font-size: 4rem;
+}
+
+.font-weight-normal {
+  font-weight: normal;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+// ******************************************************************** Borders
+
+@mixin border($direction, $size) {
+  $width: $size / 4;
+
+  @if $direction == 'all' {
+    .border-#{$direction}-#{$size} {
+      border: #{$width}rem;
+    }
+  } @else {
+    .border-#{$direction}-#{$size} {
+      border#{-$direction}: #{$width}rem;
+    }
+  }
+}
+
+@mixin border-radius($size) {
+  $percentage: $size * 10;
+
+  @if $size == 5 {
+    .border-radius-circle {
+      border-radius: unquote("#{$percentage}%");
+    }
+  } @else {
+    .border-radius-#{$size} {
+      border-radius: unquote("#{$percentage}%");
+    }
+  }
+}
+
+@each $property in $spacing-properties {
+  @for $i from 0 to length($spacing-properties) {
+    @include border($property, $i);
+  }
+}
+
+@for $i from 0 to 6 {
+  @include border-radius($i);
+}
+
